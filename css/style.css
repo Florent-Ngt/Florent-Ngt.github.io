@@ -1,0 +1,517 @@
+@charset "utf-8";
+
+/*****************************************************************************/
+/* css.css - TP3 - INF 1001 - Groupe 17 */
+/*****************************************************************************/
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #1F252A;
+	max-height: 100%;
+
+	font-family: 'Inconsolata', monospace;
+	font-size: 12pt;
+}
+
+@media only screen and (max-device-width : 800px) {
+	#bloc1{
+		display: none;
+	}
+	.cont{font-size: 18pt;}
+	.wrapper1{
+		max-height: 100%!important;
+	}
+
+	.cNombres {
+		margin-top: 30px!important;
+  		color: white;
+	}	
+	.ligne{
+	margin-top: 21.6px!important;
+	}
+
+	.ligne2{
+		margin-top: 66px!important;
+	}
+
+	.ligne3{
+		margin-left: 33px!important;
+	}
+	#contenu {
+		padding-top: 23px!important;
+	}
+
+	#iDoze, #iCode{height: 1200px!important;}
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+/********** On organise l'en-tête et le corps de la page en flexbox **********/
+.wrapper1{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	min-height: 770px;
+	background-color: #343D46;
+}
+
+.wrapper2{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	min-height: 100%;
+}
+
+.wrapper3{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	max-height: 770px;
+	background-color: #343D46;
+}
+/*****************************************************************************/
+
+/******************* On organise les deux blocs principaux *******************/
+#bloc1{
+	background-color: #1F252A;
+	flex: 5;
+	min-height: 100vh;
+	padding-left: 10px;
+	padding-right: 4%;
+	min-width: 200px;
+	color: white;
+}
+
+#bloc2{
+	flex: 30;
+}
+
+#bloc3{
+	background-color: #1F252A;
+	flex: 1;
+	min-height: 49px;
+	position: 	relative;	
+}
+
+#bloc4{
+	background-color: #1F252A;
+	flex: 15;
+	min-height: 700px;
+	border-left : 3pt solid #99C794;
+}
+
+#bloc1 h3{
+	font-family: 'Righteous', cursive;
+	margin-top: 30%;
+}
+
+#bloc1 ul {
+	list-style-type: none;
+	padding-left: 3%;
+	text-decoration: none;
+}
+
+#bloc1 li {
+	margin-top: 20%;
+}
+
+#bloc5{
+	border-top : 2pt solid white;
+	background-color: #1F252A;
+	color: white;
+	padding-left: 4%;
+	padding-top: 1%;
+	flex: 15;
+}
+
+#terminal{
+	border-bottom : 2pt solid white;
+	margin-bottom: 1%;
+	font-weight: bold;
+}
+
+#console{
+	margin-top: 1%;
+}
+
+#left_project{
+	flex: 10;
+}
+
+#right_project{
+	flex: 7;
+}
+
+#left_prez{
+	flex: 10;
+}
+
+#right_prez{
+	flex: 7;
+}
+/*****************************************************************************/
+
+/***************************** Gestion des trapezes **************************/
+.trapeze{
+	min-width: 160px;
+    margin-top: 2%;
+    padding-top: 2px;
+	position: absolute;		
+	text-align: center;
+	color: 	white;	
+	bottom:	0;
+  	height: 0;
+  	cursor: pointer;
+    border-radius: 100% 100% 0% 0%;	
+}
+
+@supports (-ms-ime-align:auto) {
+
+	.trapeze{
+	    border-radius: 0% 0% 0% 0% !important;	
+	}
+
+    .T1{
+    	border-radius: 10% 10% 0% 0% !important;	
+		margin-left: 60px !important;
+		border-bottom: 40px solid #343D46 !important;
+	  	border-left: 0px solid #343D46 !important;
+	 	border-right: 0px solid #343D46 !important;
+	}
+
+	.T2{
+		border-radius: 10% 10% 0% 0% !important;	
+		margin-left: 230px !important;
+	  	border-bottom: 40px solid #2A3138 !important;
+	  	border-left: 0px solid #2A3138 !important;
+	 	border-right: 0px solid #2A3138 !important;
+
+	}
+
+	.T3{
+		border-radius: 10% 10% 0% 0% !important;	
+	  	border-bottom: 40px solid #2A3138 !important;
+	  	border-left: 0px solid #2A3138 !important;
+	 	border-right: 0px solid #2A3138 !important;
+
+	}
+	.T1m {
+		border-radius: 10% 10% 0% 0% !important;	
+	  	margin-left: 60px !important;
+	  	border-bottom: 40px solid #2A3138 !important;
+	  	border-left: 0px solid #2A3138 !important;
+	 	border-right: 0px solid #2A3138 !important;
+	}
+
+	.T2m{
+		border-radius: 10% 10% 0% 0% !important;	
+	  	margin-left: 230px !important;
+		border-bottom: 40px solid #343D46 !important;
+	  	border-left: 0px solid #343D46 !important;
+	 	border-right: 0px solid #343D46 !important;
+	}
+
+	.T3m{
+		border-radius: 10% 10% 0% 0% !important;	
+	  	margin-left: 400px;
+		border-bottom: 40px solid #343D46 !important;
+	  	border-left: 0px solid #343D46 !important;
+	 	border-right: 0px solid #343D46 !important;
+	}
+}
+
+.T1{
+	margin-left: 20px;
+	border-bottom: 40px solid #343D46;
+  	border-left: 15px solid transparent;
+ 	border-right: 15px solid transparent;
+}
+
+.T2{
+	margin-left: 210px;
+	border-bottom: 40px solid #2A3138;
+  	border-left: 15px solid transparent;
+ 	border-right: 15px solid transparent;
+
+}
+
+.T3{
+	margin-left: 400px;
+	border-bottom: 40px solid #2A3138;
+  	border-left: 15px solid transparent;
+ 	border-right: 15px solid transparent;
+
+}
+
+.T1m {
+  	margin-left: 20px;
+	border-bottom: 40px solid #2A3138;
+  	border-left: 15px solid transparent;
+ 	border-right: 15px solid transparent;
+}
+
+.T2m{
+  	margin-left: 210px;
+	border-bottom: 40px solid #343D46;
+  	border-left: 15px solid transparent;
+ 	border-right: 15px solid transparent;
+}
+
+.T3m{
+  	margin-left: 400px;
+	border-bottom: 40px solid #343D46;
+  	border-left: 15px solid transparent;
+ 	border-right: 15px solid transparent;
+}
+/*****************************************************************************/
+
+/******************************** Gestion du run *****************************/
+#runDiv{
+  	background-color: #99C794;
+  	position: absolute;
+  	right: 0;
+  	max-height: 30px;
+  	margin-top: 7px;
+  	margin-bottom: 7px;
+  	margin-right: 20px;
+  	padding: 2px;
+  	color: #2A3138; 
+  	border-radius: 5px;
+  	min-width: 125px;
+}
+
+#runDiv2{
+	min-height: 30px;
+  	background-color: #99C794;
+  	position: absolute;
+  	right: 0;
+  	max-height: 30px;
+  	margin-top: 7px;
+  	margin-bottom: 7px;
+  	margin-right: 20px;
+  	padding: 2px;
+  	color: #2A3138; 
+  	border-radius: 5px;
+  	min-width: 125px;
+}
+
+#runDiv2 i{
+	padding-top: 7px;
+	padding-left: 8px;
+}
+
+#runDiv2 a{
+	display: inline-block;
+	padding-left: 10px;
+	vertical-align: top;
+	padding-top: 5px;
+}
+
+#runDiv img{ 	
+  	vertical-align: middle;
+}
+
+.runContain{
+	position: relative;
+	margin-left: 750px;
+}
+
+.closeContain{
+	display: none;
+	margin-left: 750px;
+}
+
+#runDiv:hover{
+	cursor: progress;
+}
+
+#runDiv2:hover{
+	cursor: pointer;
+}
+/*****************************************************************************/
+
+/**************************** Animation du menu ******************************/
+.cacherMenu{
+	display: none;
+}
+
+#sousMenu li{
+	padding-left: 20px;
+	cursor: pointer;
+	height: 20px;
+	padding-top: 5px;	
+}
+
+#lig {
+	cursor: pointer;
+}
+/*****************************************************************************/
+
+/*************************** Gestion du copyright ****************************/
+footer{
+	position: relative;
+	flex:2;
+	padding: 30px;
+}
+
+nav{
+	flex: 5;
+}
+
+footer p{
+	text-align: center;
+	position: absolute;	
+	bottom: 0;	
+}
+/*****************************************************************************/
+
+/*************************** Gestion des nombres *****************************/
+.cNombres {
+	margin-top: 11.8px;
+  	color: white;
+	padding-right: 2%;
+}
+
+#nombre {
+	padding-top: 10px;
+	padding-bottom: 10px;
+ 	flex: 1;
+ 	padding-left: 10px;
+ 	text-align: right;
+ 	max-width: 	20px;
+}
+/*****************************************************************************/
+
+/*************************** Gestion du contenu ******************************/
+#contenu {
+	padding-top: 10px;
+ 	flex: 20;
+ 	padding-left: 10px;
+ 	
+
+}
+/*****************************************************************************/
+
+/*************************** Changement de page ******************************/
+.progress2 {
+	width: 	50%;
+	margin-left: 	25%;
+  padding: 6px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.25);  
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar2 {
+  height: 18px;
+  border-radius: 30px;
+  background-image: 
+    linear-gradient(to right, #99C794, #99C794);
+  transition: 0.4s linear;  
+  transition-property: width, background-color;    
+}
+
+.progress-moved .progress-bar2 {
+  width: 100%; 
+  background-color: #EF476F;  
+  animation: progressAnimation 1.5s;
+}
+
+@keyframes progressAnimation {
+  0%   { width: 5%; background-color: #F9BCCA;}
+  100% { width: 100%; background-color: #EF476F; }
+}
+
+#chargement{display: none;}
+
+#wait{
+	margin-top: 	20%;
+	color: 	white;
+	text-align: center;
+	padding-bottom: 	5%;	
+}
+/*****************************************************************************/
+
+/*************************** Bloc de contenus ********************************/
+.cont{
+	display: none;
+	color: white;
+	margin-left: 20px;
+	margin-top: 12px;
+}
+
+.rouge{
+	color: #EC6066;
+}
+
+.bleu{
+	color: #60B4B4;
+}
+
+.vert{
+	color: #99C794;
+}
+
+.rose{
+	color: #C695C6;
+}
+
+.rose a{
+	color: #C695C6;
+}
+
+.jaune{
+	color: #F9AE57;
+}
+
+.ligne{
+	margin-top: 12px;
+}
+
+.ligne2{
+	margin-bottom: 24px;
+}
+
+.ligne3{
+	margin-left: 33px;
+}
+
+/*****************************************************************************/
+
+/*************************** Gestion rapports ********************************/
+#appelRapportC:hover{
+	cursor: pointer;
+}
+
+#appelRapportD:hover{
+	cursor: pointer;
+}
+/*****************************************************************************/
+
+.line-1{
+	vertical-align: bottom;
+    position: relative;  
+    width: 34em;
+    margin: 0;
+    border-right: 2px solid rgba(255,255,255,.75);
+
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(50) 1s 1 normal both,
+             blinkTextCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 26em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
