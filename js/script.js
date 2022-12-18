@@ -132,9 +132,17 @@ window.onload = function() {
 
 function redimensionne() {
 	var largeur = window.innerWidth;
-	var bloc = document.getElementById('bloc1');
-    if (largeur <= 1100) 	
-    	bloc.style.display="none";
-   	else
-   		bloc.style.display="flex";
+	var bloc1 = document.getElementById('bloc1');
+    var blocP = document.getElementById('right_prez');
+    var blocPr = document.getElementById('right_project');
+    if (largeur <= 1490) {
+    	bloc1.style.display="none";
+        blocP.style.display="none";
+        blocPr.style.display="none";
+    }
+   	else {
+   		bloc1.style.display="flex";
+        blocP.style.display="flex";
+        blocPr.style.display="flex";
+    }
 }
