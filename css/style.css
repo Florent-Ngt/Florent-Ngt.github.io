@@ -8,14 +8,19 @@ body{
 	margin: 0;
 	padding: 0;
 	background-color: #1F252A;
-	max-height: 100%;
-
+	min-height: 100%;
 	font-family: 'Inconsolata', monospace;
 	font-size: 12pt;
 }
 
 @media only screen and (max-device-width : 800px) {
 	#bloc1{
+		display: none;
+	}
+	#right_prez{
+		display: none;
+	}
+	#right_project{
 		display: none;
 	}
 	.cont{font-size: 18pt;}
@@ -54,7 +59,7 @@ a{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	min-height: 770px;
+	min-height: 100%;
 	background-color: #343D46;
 }
 
@@ -69,7 +74,7 @@ a{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	max-height: 770px;
+	height: 100%;
 	background-color: #343D46;
 }
 /*****************************************************************************/
@@ -99,7 +104,8 @@ a{
 #bloc4{
 	background-color: #1F252A;
 	flex: 15;
-	min-height: 700px;
+	height: 100%;
+	min-width: 860px;
 	border-left : 3pt solid #99C794;
 }
 
@@ -138,19 +144,37 @@ a{
 }
 
 #left_project{
-	flex: 10;
+	flex: 4;
+	height: 100%;
 }
 
 #right_project{
-	flex: 7;
+	flex: 2;
 }
 
 #left_prez{
-	flex: 10;
+	flex: 4;
+	height: 100%;
 }
 
 #right_prez{
-	flex: 7;
+	flex: 2;
+    width: 34em;
+}
+
+#left_contact{
+	flex: 4;
+	height: 100%;
+}
+
+#right_contact{
+	flex: 2;
+}
+
+.emoji{
+	margin: 0;
+	padding: 0;
+	font-size: 10pt;
 }
 /*****************************************************************************/
 
@@ -468,7 +492,7 @@ footer p{
 }
 
 .ligne{
-	margin-top: 12px;
+	margin-top: 1.3%;
 }
 
 .ligne2{
