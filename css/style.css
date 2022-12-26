@@ -10,7 +10,7 @@ body{
 	background-color: #1F252A;
 	min-height: 100%;
 	font-family: 'Inconsolata', monospace;
-	font-size: 12pt;
+	font-size: 100%;
 }
 
 @media only screen and (max-device-width : 800px) {
@@ -82,9 +82,9 @@ a{
 /******************* On organise les deux blocs principaux *******************/
 #bloc1{
 	background-color: #1F252A;
-	flex: 5;
+	flex: 4;
 	min-height: 100vh;
-	padding-left: 10px;
+	padding-left: 2%;
 	padding-right: 4%;
 	min-width: 200px;
 	color: white;
@@ -394,18 +394,8 @@ footer p{
 
 /*************************** Gestion des nombres *****************************/
 .cNombres {
-	margin-top: 11.8px;
   	color: white;
 	padding-right: 2%;
-}
-
-#nombre {
-	padding-top: 10px;
-	padding-bottom: 10px;
- 	flex: 1;
- 	padding-left: 10px;
- 	text-align: right;
- 	max-width: 	20px;
 }
 /*****************************************************************************/
 
@@ -463,8 +453,8 @@ footer p{
 .cont{
 	display: none;
 	color: white;
-	margin-left: 20px;
-	margin-top: 12px;
+	margin-left: 2%;
+	margin-top: 0;
 }
 
 .rouge{
@@ -496,11 +486,11 @@ footer p{
 }
 
 .ligne2{
-	margin-bottom: 24px;
+	margin-bottom: 2%;
 }
 
 .ligne3{
-	margin-left: 33px;
+	margin-left: 3%;
 }
 
 /*****************************************************************************/
@@ -538,4 +528,32 @@ footer p{
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
   to{border-right-color: transparent;}
+}
+
+textarea {
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	color: aliceblue;
+	margin: 1.5% 4%;
+	line-height:230%;
+	box-sizing: border-box;
+	border: none;
+	background-color: #343D46;
+	resize: none;
+	font-size: 100%;
+	font-family: 'Inconsolata', monospace;
+  }
+
+  button {
+    display: inline;
+    border: none;
+    margin: 0;
+	padding: 0;
+    background: none;
+    color: #C695C6;
+    cursor: pointer;
+	font-size: 100%;
+	line-height:90%;
+	font-family: 'Inconsolata', monospace;
 }
